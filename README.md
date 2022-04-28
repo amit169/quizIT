@@ -1,7 +1,7 @@
 # quizIT Application 
 My Quiz Application for SET08801 2021-2 TR2 0
 
-
+URL for APP : https://amit169.github.io/quizIT/
 
 SET08801 2021-2 TR2 001 - Web Technologies
 Assessment 1- Quiz Application Design Document
