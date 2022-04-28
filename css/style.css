@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Nova Square', cursive;
+    font-family: 'Lucida Console', Monospace;
 }
 
 h1 {
@@ -63,7 +63,7 @@ h2 {
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: rgb(28, 26, 26);
+    color: rgb(255,0,255);
     background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
     border-radius: 4px;
 }
