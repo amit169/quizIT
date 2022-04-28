@@ -1,6 +1,6 @@
 
 :root {
-    background-image: url('../img/matrix.gif');
+    background-color: rgb(29, 26, 26)
 }
 
 * {
@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Lucida Console', Monospace;
+    font-family: 'Nova Square', cursive;
 }
 
 h1 {
