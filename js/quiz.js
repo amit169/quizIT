@@ -97,22 +97,20 @@ let availableQuestions = []
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 9
 
-//Initialise the game , set variables and get first question.
-beginGame = () => {
+startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    findNewQuestion()
+    getNewQuestion()
 }
 
-findNewQuestion = () => {
-    //check the length of the array and that the questionCounter is less than the MAX_Questions to end the game
+getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('../html/end.html')
     }
-   //increment the questions to get to MAX_Questions
+
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
@@ -160,4 +158,4 @@ incrementScore = num => {
     scoreText.innerText = score
 }
 
-beginGame()
+startGame()
