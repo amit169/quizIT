@@ -86,39 +86,51 @@ let questions = [
 ]
 
 
-
+//Declare variables
 let currQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-
+//Award 100 points for each correct answer
 const SCORE_POINTS = 100
+//Set the maximum number of questions , limit to the max size of the data set!
 const MAX_QUESTIONS = 9
 
+// Initiate the quiz
 startGame = () => {
+    //initialise the number of questions to zero
     questionCounter = 0
+    //initialise the score to zero
     score = 0
+    // populate the available questions from the data set above
     availableQuestions = [...questions]
-    getNewQuestion()
+    //call the getNewQuestionFunction
+    getAntoherQuestion()
 }
 
-getNewQuestion = () => {
+getAntoherQuestion = () => {
+    //check is there are more available questions and that we have not reached the Maximun number of questions.
+    //if either is reached end the game and go the to end page
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        //save the score to the most recent in local storage
         localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('../html/end.html')
+        //navigate to the final page
+        return window.location.assign('../html/final.html')
     }
-
+    //increment the question counter
     questionCounter++
+    //set the question from the current index of the array
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    //increase the progress bar in accordance to the number of questions completed
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-
+    //get the random question from the set to ensure no duplicates
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    // get question from the index
     currQuestion = availableQuestions[questionsIndex]
     question.innerText = currQuestion.question
-
+   //display the choices
     choices.forEach(choice => {
         const number = choice.dataset['number']
         choice.innerText = currQuestion['choice' + number]
@@ -128,28 +140,24 @@ getNewQuestion = () => {
 
     acceptingAnswers = true
 }
-
+//code for listening for the choice
 choices.forEach(choice => {
+    //action the click event
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
-
+       //apply the class to the associated choice
         let classToApply = selectedAnswer == currQuestion.answer ? 'correct' : 'incorrect'
-
+       // if the answer is correct , increment the score
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
 
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
-
-        }, 1000)
     })
 })
 
