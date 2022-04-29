@@ -1,67 +1,36 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tutorial resouces</title>
-</head>
-<body>
-<div id="myData"></div>
-<script>
-    fetch('resources.json')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            appendData(data);
-        })
-        .catch(function (err) {
-            console.log('error: ' + err);
-        });
-    function appendData(data) {
-        var mainContainer = document.getElementById("myData");
-        for (var i = 0; i < data.length; i++) {
-            var div = document.createElement("div");
-            div.innerHTML = 'Resource: ' + data[i].providerName + ' ' + data[i].urlLink;
-            mainContainer.appendChild(div);
-        }
-    }
-</script>
-</body>
-</html>
-
-
-
-
-<!--!DOCTYPE html>
-<html>
-
-<head>
-    <title>Read Text File</title>
-    <script src="../js/tutorial.js"></script>
-</head>
-
-<body>
-
-
-<pre id="output"></pre>
-
-</body>
-
-</html>
-
-<!--html lang="en">
-<head>
-    <title>Tutorial</title>
     <link rel="stylesheet" href="../css/style.css">
-</head>
+    <title>Tutorial</title>
 <body>
-<div class="container">
-    <div id="highScores" class="flex-center flex-column">
-        <a href="/index.html" class="btn">Go Home<i class="fas fa-home"></i></a>
-    </div>
-</div>
+<img src="../img/training.png" alt="none" width="400" height="200">
+<h1>use the following resources to prepare for the challenge</h1>
+<h1><div id="myData"></div></h1>
 <script src="../js/tutorial.js"></script>
+<br>
+<h1>Cheat Sheet</h1>
+<h1>
+<table style='font-family:"Courier New", Courier, monospace; font-size:200%'; bgcolor="#faebd7" ;>
+    <tr>
+        <th>Element</th>
+        <th>Syntax</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>&lt;p&gt;</td>
+        <td>&lt;p&gt; this is a paragraph &lt;/p&gt;</td>
+        <td>to display a paragraph</td>
+    </tr>
+    <tr>
+        <td>&lt;a&gt;</td>
+        <td>&lt;a&gt; href="www.test.com" &lt;/a&gt;</td>
+        <td>to  create a hyperlink</td>
+    </tr>
+</table>
+</h1>
+
 </body>
-</html-->
+</html>

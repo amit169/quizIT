@@ -1,19 +1,18 @@
-var file = "../data/tutorial.txt"
-
-    file.addEventListener('change', () => {
-    var txtArr = [];
-    var fr = new FileReader();
-    fr.onload = function() {
-        // By lines
-        var lines = this.result.split('\n');
-        for (var line = 0; line < lines.length; line++) {
-            txtArr = [...txtArr, ...(lines[line].split(" "))];
-        }
+fetch('../data/resources.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        appendData(data);
+    })
+    .catch(function (err) {
+        console.log('error: ' + err);
+    });
+function appendData(data) {
+    let mainContainer = document.getElementById("myData");
+    for (let i = 0; i < data.length; i++) {
+        let div = document.createElement("div");
+        div.innerHTML = 'Name: ' + data[i].providerName + ' ' + data[i].urlLink;
+        mainContainer.appendChild(div);
     }
-    fr.onloadend = function() {
-        console.log(txtArr);
-        document.getElementById('output').textContent=txtArr.join("");
-    }
-    fr.readAsText(file.files[0]);
-})
-
+}

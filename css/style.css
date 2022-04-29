@@ -138,3 +138,7 @@ input::placeholder {
     font-size: 2rem;
     color: rgb(28, 26, 26)
 }
+
+table, th, td {
+    border: 1px solid;
+}
