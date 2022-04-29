@@ -7,8 +7,27 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
 // The following Array is the list of questions.
+/*
+$.getJSON('../data/questions.json', function (json) {
+    var questions = [];
+    for (var key in json) {
+        if (json.hasOwnProperty(key)) {
+            var item = json[key];
+            questions.push({
+                question: item.question,
+                choice1: item.choice1,
+                choice2: item.choice2,
+                choice3: item.choice3,
+                choice4: item.choice4,
+                correct: item.correct
+            });
+        }
+    }
+});
+*/
 //Each question has four possible answers
 //The correct answer is indicated by the index (e.g. answer: 1)
+
 let questions = [
     {
         question: 'What is the full form of HTML ?',
@@ -40,7 +59,7 @@ let questions = [
         choice2: "<lb>",
         choice3: "<linebr>",
         choice4: "<br>",
-        answer: 3,
+        answer: 4,
     },
     {
         question: "Which is not a valid attribute for <<body>>?",
@@ -52,18 +71,18 @@ let questions = [
     },
     {
         question: "What is the correct HTML syntax for adding a background the color yellow?",
-        choice1: "<<body>yellow</body>>",
-        choice2: "<<body bg=”yellow”>",
-        choice3: "<<body bgcolor=yellow>",
-        choice4: "<<bground yellow>",
+        choice1: "<body>yellow</body>",
+        choice2: "<body bg=”yellow”>",
+        choice3: "<body bgcolor=yellow>",
+        choice4: "<bground yellow>",
         answer: 2,
     },
     {
         question: "What is the correct HTML syntax for creating a hyperlink?",
-        choice1: "<<a href=\"index.html\">Quiz HTML</a>",
-        choice2: "<<a ulr=\"index.html\">Quiz HTML</a>",
-        choice3: "<<alink=\"index.html\">Quiz HTML</a>",
-        choice4: "<<aweb=\"index.html\">Quiz HTML</a>",
+        choice1: "<a href=\"index.html\">Quiz HTML</a>",
+        choice2: "<a ulr=\"index.html\">Quiz HTML</a>",
+        choice3: "<alink=\"index.html\">Quiz HTML</a>",
+        choice4: "<aweb=\"index.html\">Quiz HTML</a>",
         answer: 1,
     },
     {

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "question": "What is the full form of HTML ?",
+    "choice1": "Hypertext Markup Language",
+    "choice2": "Helpful Text Markup Language",
+    "choice3": "Hypertext Markup Library ",
+    "choice4": "Hypertext Transfer Language",
+    "correct": "1"
+  },
+  {
+    "id": "2",
+    "question": "Who is making the Web standards?",
+    "choice1": "Google",
+    "choice2": "The World Wide Web Consortium",
+    "choice3": "Microsoft",
+    "choice4": "The World Wide Web Forum",
+    "correct": "2"
+  },
+  {
+    "id": "3",
+    "question": "Choose the correct HTML element for the largest heading?",
+    "choice1": "<<head>>",
+    "choice2": "<<heading>>",
+    "choice3": "<H1>",
+    "choice4": "<H6>",
+    "correct": "3"
+  },
+  {
+    "id": "4",
+    "question": "What is the correct HTML element for inserting a line break?",
+    "choice1": "<break>",
+    "choice2": "<lb>",
+    "choice3": "<linebr>",
+    "choice4": "<br>",
+    "correct": "4"
+  },
+  {
+    "id": "5",
+    "question": "Which is not a valid attribute for <<body>>?",
+    "choice1": "vlink",
+    "choice2": "onload",
+    "choice3": "onfocus",
+    "choice4": "paragraph",
+    "correct": "4"
+  },
+  {
+    "id": "6",
+    "question": "What is the correct HTML syntax for adding a background the color yellow?",
+    "choice1": "<body>yellow</body>",
+    "choice2": "<body bg=”yellow”>",
+    "choice3": "<body bgcolor=yellow>",
+    "choice4": "<bground yellow>",
+    "correct": "2"
+  },
+  {
+    "id": "7",
+    "question": "What is the correct HTML syntax for creating a hyperlink?",
+    "choice1": "<a href=\"index.html\">Quiz HTML</a>",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "correct": ""
+  },
+  {
+    "id": "8",
+    "question": "",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "correct": ""
+  },
+  {
+    "id": "9",
+    "question": "",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "correct": ""
+  }
+]
