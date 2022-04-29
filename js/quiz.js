@@ -47,8 +47,8 @@ let questions = [
     },
     {
         question: "Choose the correct HTML element for the largest heading?",
-        choice1: "<<head>>",
-        choice2: "<<heading>>",
+        choice1: "<head>",
+        choice2: "<heading>",
         choice3: "<H1>",
         choice4: "<H6>",
         answer: 3,
