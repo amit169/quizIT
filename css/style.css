@@ -12,7 +12,7 @@
 }
 
 h1 {
-    font-size: 4.4rem;
+    font-size: 3.4rem;
     color: #fff;
     margin-bottom: 5rem;
 }
@@ -63,9 +63,9 @@ h2 {
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: rgb(255,0,255);
-    background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
-    border-radius: 4px;
+    color: rgb(255,0,0);
+    background: rgb(0, 102,255);
+    border-radius: 16px;
 }
 
 .btn:hover {
@@ -82,7 +82,8 @@ h2 {
 }
 
 #highscore-btn {
-    background: linear-gradient(90deg, rgb(255, 247, 9) 0%, rgb(240, 221, 6) 100%);
+    background: rgb(255,0,0);
+    color:rgb(0,0,255);
 }
 
 #highscore-btn:hover {
